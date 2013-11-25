@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<!--
+/*******************************************************************************
+ * Copyright (c) 2013 FZI, Germany
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Christian Busch - initial API and implementation
+ *******************************************************************************/
+ -->
+ 
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="Parse Code with JaMoPP"
+            id="org.kopl.jamopp.ModelExtractor.commands.extraction"
+            name="Extraction">
+      </category>
+      <command
+            categoryId="org.kopl.jamopp.ModelExtractor.commands.extraction"
+            description="Parses the model of the selected container into single xmi file. You will have to specify a location to safe to."
+            id="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
+            name="Parse into single xmi file">
+      </command>
+      <command
+            categoryId="org.kopl.jamopp.ModelExtractor.commands.extraction"
+            description="Parses the model of the selected container into multiple xmi files - one for each source file. You will have to specify a location to safe to."
+            id="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand"
+            name="Parse into multiple xmi files">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
+            class="org.kopl.jamopp.modelextractor.handlers.ExtractionHandler">
+      </handler>
+      <handler
+            class="org.kopl.jamopp.modelextractor.handlers.MultipleExtractionHandler"
+            commandId="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               label="Extract using JaMoPP">
+            <command
+                  commandId="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
+                  id="org.kopl.jamopp.ModelExtractor.menus.extractionCommand"
+                  mnemonic="S">
+               <visibleWhen>
+                  <with
+                        variable="activeMenuSelection">
+                     <iterate
+                           ifEmpty="false">
+                        <or>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IJavaProject">
+                           </adapt>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IPackageFragmentRoot">
+                           </adapt>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IPackageFragment">
+                           </adapt>
+                        </or>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand"
+                  id="org.kopl.jamopp.ModelExtractor.menus.multiExtractionCommand"
+                  mnemonic="M">
+               <visibleWhen>
+                  <with
+                        variable="activeMenuSelection">
+                     <iterate
+                           ifEmpty="false">
+                        <or>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IJavaProject">
+                           </adapt>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IPackageFragmentRoot">
+                           </adapt>
+                           <adapt
+                                 type="org.eclipse.jdt.core.IPackageFragment">
+                           </adapt>
+                        </or>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
