@@ -8,7 +8,7 @@
  * Contributors:
  *    Christian Busch - initial API and implementation
  *******************************************************************************/
-package de.fzi.se.modelextractor.handlers;
+package org.kopl.jamopp.modelextractor.handlers;
 
 import java.io.File;
 
@@ -23,8 +23,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
-
-import de.fzi.se.modelextractor.Extractor;
+import org.kopl.jamopp.modelextractor.Extractor;
 
 /**
  * This handler handles the extraction of the model into a single xmi file.

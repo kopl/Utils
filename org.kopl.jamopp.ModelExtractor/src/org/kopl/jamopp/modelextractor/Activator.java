@@ -8,7 +8,7 @@
  * Contributors:
  *    Christian Busch - initial API and implementation
  *******************************************************************************/
-package de.fzi.se.modelextractor;
+package org.kopl.jamopp.modelextractor;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -20,7 +20,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
     // The plug-in ID
-    public static final String PLUGIN_ID = "de.fzi.se.ModelExtractor"; //$NON-NLS-1$
+    public static final String PLUGIN_ID = "org.kopl.jamopp.ModelExtractor"; //$NON-NLS-1$
 
     // The shared instance
     private static Activator plugin;

@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ModelExtractor
-Bundle-SymbolicName: de.fzi.se.ModelExtractor;singleton:=true
+Bundle-SymbolicName: org.kopl.jamopp.ModelExtractor;singleton:=true
 Bundle-Version: 0.0.1
-Bundle-Activator: de.fzi.se.modelextractor.Activator
+Bundle-Activator: org.kopl.jamopp.modelextractor.Activator
 Bundle-Vendor: fzi
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

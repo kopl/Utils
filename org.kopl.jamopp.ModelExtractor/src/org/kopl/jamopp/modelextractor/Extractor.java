@@ -8,7 +8,7 @@
  * Contributors:
  *    Christian Busch - initial API and implementation
  *******************************************************************************/
-package de.fzi.se.modelextractor;
+package org.kopl.jamopp.modelextractor;
 
 import java.io.File;
 import java.io.IOException;

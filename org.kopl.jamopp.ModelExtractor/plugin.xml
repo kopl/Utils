@@ -20,31 +20,31 @@
          point="org.eclipse.ui.commands">
       <category
             description="Parse Code with JaMoPP"
-            id="de.fzi.se.ModelExtractor.commands.extraction"
+            id="org.kopl.jamopp.ModelExtractor.commands.extraction"
             name="Extraction">
       </category>
       <command
-            categoryId="de.fzi.se.ModelExtractor.commands.extraction"
+            categoryId="org.kopl.jamopp.ModelExtractor.commands.extraction"
             description="Parses the model of the selected container into single xmi file. You will have to specify a location to safe to."
-            id="de.fzi.se.ModelExtractor.commands.extractionCommand"
+            id="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
             name="Parse into single xmi file">
       </command>
       <command
-            categoryId="de.fzi.se.ModelExtractor.commands.extraction"
+            categoryId="org.kopl.jamopp.ModelExtractor.commands.extraction"
             description="Parses the model of the selected container into multiple xmi files - one for each source file. You will have to specify a location to safe to."
-            id="de.fzi.se.ModelExtractor.commands.multiExtractionCommand"
+            id="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand"
             name="Parse into multiple xmi files">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            commandId="de.fzi.se.ModelExtractor.commands.extractionCommand"
-            class="de.fzi.se.modelextractor.handlers.ExtractionHandler">
+            commandId="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
+            class="org.kopl.jamopp.modelextractor.handlers.ExtractionHandler">
       </handler>
       <handler
-            class="de.fzi.se.modelextractor.handlers.MultipleExtractionHandler"
-            commandId="de.fzi.se.ModelExtractor.commands.multiExtractionCommand">
+            class="org.kopl.jamopp.modelextractor.handlers.MultipleExtractionHandler"
+            commandId="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand">
       </handler>
    </extension>
    <extension
@@ -54,8 +54,8 @@
          <menu
                label="Extract using JaMoPP">
             <command
-                  commandId="de.fzi.se.ModelExtractor.commands.extractionCommand"
-                  id="de.fzi.se.ModelExtractor.menus.extractionCommand"
+                  commandId="org.kopl.jamopp.ModelExtractor.commands.extractionCommand"
+                  id="org.kopl.jamopp.ModelExtractor.menus.extractionCommand"
                   mnemonic="S">
                <visibleWhen>
                   <with
@@ -78,8 +78,8 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="de.fzi.se.ModelExtractor.commands.multiExtractionCommand"
-                  id="de.fzi.se.ModelExtractor.menus.multiExtractionCommand"
+                  commandId="org.kopl.jamopp.ModelExtractor.commands.multiExtractionCommand"
+                  id="org.kopl.jamopp.ModelExtractor.menus.multiExtractionCommand"
                   mnemonic="M">
                <visibleWhen>
                   <with
