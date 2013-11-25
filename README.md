@@ -10,7 +10,7 @@ Install, right click your project of choice and select
 * "Extract Using JaMoPP" > "Parse into single xmi file"
 * "Extract Using JaMoPP" > "Parse into multiple xmi files"
  
-(docs/jamopp-extractor-contextmenu.png)
+![JaMoPP Parser Context Menu](/kopl/Utils/docs/jamopp-extractor-contextmenu.png)
 
 The former will build one big xmi file containing all CompilationUnit and contained model elements.
 The later will create a separate xmi file for each CompilationUnit.
